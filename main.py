@@ -1,7 +1,7 @@
 import cv2
 import mediapipe as mp
 from utils import draw_button, detect_hover
-from finance_professional import run_finance, evaluate, reset
+from finance import run_finance, evaluate, reset
 from medical import run_medical
 from disaster import run_disaster
 
