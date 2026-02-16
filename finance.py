@@ -327,9 +327,9 @@ class FinanceSimulation:
             img = self.images[phase_data['image']]
             
             # Professional frame
-            # cv2.rectangle(frame, (img_x - 4, img_y - 4),
-            #              (img_x + 284, img_y + 284),
-            #              self.colors['blue_500'], 3, cv2.LINE_AA)
+            cv2.rectangle(frame, (img_x - 4, img_y - 4),
+                         (img_x + 284, img_y + 284),
+                         self.colors['blue_500'], 3, cv2.LINE_AA)
             
             frame = self.alpha_blend(frame, img, img_x, img_y)
         

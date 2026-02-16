@@ -29,7 +29,7 @@ def safe_import(module_name):
         )
 
 # Import all worlds
-run_finance, eval_finance, reset_finance, finance_available = safe_import("finance")
+run_finance, eval_finance, reset_finance, finance_available = safe_import("finance_fixed")
 run_medical, eval_medical, reset_medical, medical_available = safe_import("medical")
 run_disaster, eval_disaster, reset_disaster, disaster_available = safe_import("disaster")
 run_cybersecurity, eval_cyber, reset_cyber, cyber_available = safe_import("cybersecurity")
