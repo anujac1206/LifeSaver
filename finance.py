@@ -445,13 +445,19 @@ class FinanceSimulation:
             if change == 0:
                 continue
             
+            # label = stat.replace('_', ' ').title()
+            # sign = '+' if change > 0 else ''
+            # color = self.colors['emerald_400'] if change > 0 else self.colors['rose_400']
+            # arrow = '↑' if change > 0 else '↓'
+            
+            # cv2.putText(frame, f"{arrow} {label}", (x + 25, impact_y),
+            #            cv2.FONT_HERSHEY_SIMPLEX, 0.62, self.colors['gray_300'], 1, cv2.LINE_AA)
             label = stat.replace('_', ' ').title()
             sign = '+' if change > 0 else ''
             color = self.colors['emerald_400'] if change > 0 else self.colors['rose_400']
-            arrow = '↑' if change > 0 else '↓'
-            
-            cv2.putText(frame, f"{arrow} {label}", (x + 25, impact_y),
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.62, self.colors['gray_300'], 1, cv2.LINE_AA)
+            cv2.putText(frame, label, (x + 25, impact_y),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.62, self.colors['gray_300'], 1, cv2.LINE_AA)
+
             
             change_text = f'{sign}{int(change)}'
             cv2.putText(frame, change_text, (x + width - 75, impact_y),
